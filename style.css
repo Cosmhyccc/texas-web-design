@@ -11,3 +11,5 @@
 .brand{flex-direction:row;align-items:center;gap:10px}.brand-wordmark{display:flex;flex-direction:column}.brand-icon{width:54px;height:54px;object-fit:contain;flex-shrink:0}@media(max-width:600px){.brand{gap:5px;font-size:23px}.brand-icon{width:39px;height:39px}.brand-sub{font-size:7px;letter-spacing:1.1px}.header nav{gap:10px}.header nav .nav-offer{padding:10px}.header nav .nav-offer span{margin-left:3px}}@media(max-width:360px){.header nav>a:first-child{display:none}}
 
 .project-caption>div{padding-left:0}.build-heading h3{font-size:27px;line-height:1.25}.build-heading p{font-size:13px;color:var(--muted);line-height:1.7}.project-image.examcat{background:#e7e1d8}@media(max-width:600px){.project-caption>.text-link{margin-left:0}.project-image.examcat img{min-height:0;height:auto;aspect-ratio:1.44;object-fit:contain}.build-heading h3{font-size:25px}}
+
+.project-image.stooodents{background:#e3deef}.project-image.stooodents img{max-height:none}@media(max-width:600px){.project-image.stooodents img{min-height:0;height:auto;aspect-ratio:1.44;object-fit:contain}}

@@ -1,7 +1,7 @@
 # Texas Web Design
 
-A static, mobile-first business website for Saif Ali’s Austin website service.
+Mobile-first website service for Texas businesses.
 
-Independent RBS and SWAT concept demos are labeled as concepts, not paid client launches.
+Selected work: Examcat (https://examcat.app/) and an independent SWAT concept demo. Examcat’s 500+ users claim was supplied by the site owner. No public fixed pricing.
 
-No build dependencies. Open index.html or serve with `python3 -m http.server 4188`.
+Static HTML, CSS and JavaScript.

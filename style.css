@@ -88,8 +88,6 @@ figure { margin: 0; }
 .w--blue { color: var(--blue); }
 .w--orange { color: var(--orange); }
 .w--green { color: var(--green-ink); }
-.h1 .w:nth-child(2) { transform: rotate(-2deg); transform-origin: 20% 60%; }
-.h1__l:nth-child(2) .w:nth-child(2) { transform: rotate(1.6deg); }
 .kick { color: var(--orange); font-size: clamp(18px, 1.6vw, 24px); margin: 0 0 10px; transform: rotate(-2deg); transform-origin: left; }
 .sub { font-size: clamp(17px, 1.35vw, 21px); line-height: 1.42; max-width: 36em; margin: 20px 0 0; }
 .fine { font-size: 13px; color: var(--dim); max-width: 60em; margin: 22px 0 0; }
@@ -117,7 +115,7 @@ section { max-width: var(--max); margin: 0 auto; padding: clamp(70px, 9vw, 130px
 /* ---------- hero ---------- */
 .hero {
   position: relative; min-height: 100svh;
-  display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); align-items: center;
+  display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, .5fr); align-items: center;
   gap: clamp(16px, 3vw, 48px);
   padding-top: 110px; padding-bottom: 60px;
 }
@@ -133,7 +131,7 @@ section { max-width: var(--max); margin: 0 auto; padding: clamp(70px, 9vw, 130px
 .chip:nth-child(even) { transform: rotate(2deg); }
 .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 34px; }
 
-.hero__me { position: relative; justify-self: center; width: min(100%, 400px); padding-top: 70px; }
+.hero__me { position: relative; justify-self: center; width: min(100%, 270px); padding-top: 56px; }
 .cut { filter: drop-shadow(4px 8px 0 rgba(59,42,20,.16)); }
 .cut--hero { width: 100%; transform: rotate(3deg); transform-origin: 50% 100%; }
 .hero__me:hover .cut--hero { animation: wiggle .6s var(--pop); }
@@ -313,7 +311,6 @@ details p { margin: 0 4px 22px; font-size: 17px; line-height: 1.5; max-width: 46
   .brand__name b { font-size: 13px; }
   .brand__logo { width: 40px; height: 40px; }
   .hero { grid-template-columns: 1fr; min-height: 0; padding-top: 96px; gap: 8px; }
-  .h1 { font-size: clamp(54px, 17vw, 96px); }
   .hero__me { width: min(78%, 320px); padding-top: 64px; margin-top: 14px; }
   .bubble { left: -10%; max-width: 220px; }
   .bubble p { font-size: 15px; }
@@ -341,4 +338,18 @@ details p { margin: 0 4px 22px; font-size: 17px; line-height: 1.5; max-width: 46
   .grain, .pin--you, .hero__me:hover .cut--hero { animation: none; }
   .js .rv { opacity: 1; translate: none; transition: none; }
   * { transition-duration: .01ms !important; }
+}
+
+/* hero: AUSTIN is the focal point */
+.h1__big { display: flex; align-items: center; gap: .04em; font-size: clamp(110px, 17vw, 260px); line-height: .82; white-space: nowrap; }
+.h1__big .w { transform: rotate(-2deg); transform-origin: 30% 70%; }
+.h1__tx { width: .52em; height: .52em; transform: rotate(10deg); filter: drop-shadow(3px 5px 0 rgba(59,42,20,.2)); margin-top: -.1em; }
+.h1__small { display: block; font-size: clamp(40px, 5.2vw, 80px); line-height: .9; margin-top: .12em; white-space: nowrap; }
+.h1__small .w:last-child { transform: rotate(1.5deg); }
+.hero .lede { font-size: clamp(20px, 1.7vw, 26px); margin-top: 22px; }
+.hero__hi { font-size: clamp(20px, 2vw, 30px); }
+@media (max-width: 760px) {
+  .h1__big { font-size: clamp(84px, 25vw, 130px); }
+  .h1__small { font-size: clamp(30px, 9.6vw, 50px); }
+  .hero__me { width: min(60%, 230px); }
 }

@@ -36,8 +36,9 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline
 ::selection { background: var(--green); }
 figure { margin: 0; }
 .hand { font-family: var(--f-hand); font-weight: 400; }
-.stick { filter: url(#stk); }
-.stick-sm { filter: url(#stk-sm); }
+/* box stickers: pure CSS (cream rim + ink line + soft shadow); SVG filters glitch on iOS Safari */
+.stick, .stat, .card:not(.card--me) { box-shadow: 0 0 0 5px var(--cream), 0 0 0 7px var(--ink), 4px 8px 10px 4px rgba(59,42,20,.25); }
+.stick-sm, .chip { box-shadow: 0 0 0 3px var(--cream), 0 0 0 5px var(--ink), 2px 5px 6px 2px rgba(59,42,20,.22); }
 .skip { position: fixed; left: 12px; top: -100px; z-index: 100; background: var(--ink); color: var(--cream); padding: 12px 16px; border-radius: 10px; }
 .skip:focus { top: 12px; }
 
@@ -126,7 +127,7 @@ section { max-width: var(--max); margin: 0 auto; padding: clamp(70px, 9vw, 130px
 .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 12px; padding: 0; margin: 24px 0 0; }
 .chip {
   font-family: var(--f-head); font-weight: 900; text-transform: uppercase; font-size: 18px; letter-spacing: .02em;
-  padding: 7px 14px 6px; border-radius: 10px; filter: url(#stk-sm);
+  padding: 7px 14px 6px; border-radius: 10px;
 }
 .chip:nth-child(odd) { transform: rotate(-2.5deg); }
 .chip:nth-child(even) { transform: rotate(2deg); }
@@ -150,8 +151,8 @@ section { max-width: var(--max); margin: 0 auto; padding: clamp(70px, 9vw, 130px
 .tag--map { left: -8%; bottom: 12%; background: var(--green); transform: rotate(-6deg); }
 
 /* ---------- proof strip ---------- */
-.proof { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; padding-top: 10px; }
-.stat { border-radius: 18px; padding: 20px 20px 18px; filter: url(#stk); }
+.proof { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; padding-top: 10px; }
+.stat { border-radius: 18px; padding: 20px 20px 18px; }
 .stat:nth-child(odd) { transform: rotate(-1.4deg); }
 .stat:nth-child(even) { transform: rotate(1.2deg); }
 .stat b { display: block; font-family: var(--f-head); font-weight: 900; font-size: clamp(46px, 4.6vw, 70px); line-height: .9; }
@@ -224,7 +225,7 @@ section { max-width: var(--max); margin: 0 auto; padding: clamp(70px, 9vw, 130px
 
 /* ---------- services ---------- */
 .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 2.4vw, 34px); }
-.card { position: relative; border-radius: 22px; padding: 26px 24px 24px; filter: url(#stk); transition: transform .5s var(--pop); }
+.card { position: relative; border-radius: 22px; padding: 26px 24px 24px; transition: transform .5s var(--pop); }
 .card:nth-child(3n+1) { transform: rotate(-1.2deg); }
 .card:nth-child(3n+2) { transform: rotate(.9deg); }
 .card:nth-child(3n) { transform: rotate(-.5deg); }
@@ -235,7 +236,7 @@ section { max-width: var(--max); margin: 0 auto; padding: clamp(70px, 9vw, 130px
 .card ul { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 6px; }
 .card li { font-size: 15px; padding-left: 22px; position: relative; }
 .card li::before { content: "→"; position: absolute; left: 0; }
-.card--me { filter: none; display: flex; align-items: flex-end; gap: 6px; padding: 0; }
+.card--me { display: flex; align-items: flex-end; gap: 6px; padding: 0; }
 .card--me:hover { transform: rotate(-.5deg); }
 .cut--card { width: 52%; transform: rotate(-4deg); flex: none; }
 .card--me .hand { font-size: 21px; line-height: 1.2; margin: 0 0 14px; color: var(--blue); transform: rotate(-3deg); }
@@ -318,7 +319,7 @@ details p { margin: 0 4px 22px; font-size: 17px; line-height: 1.5; max-width: 46
   .tag { font-size: 15px; }
   .tag--map { left: -12%; }
   .hero__cta .cta:first-child { white-space: normal; height: auto; min-height: 56px; padding: 10px 20px; text-align: left; line-height: 1; }
-  .proof { gap: 14px; }
+  .proof { gap: 20px; padding-left: 22px; padding-right: 22px; }
   .stat { padding: 16px 14px; }
   .stat span { font-size: 13.5px; }
   .screens, .cards, .shots, .steps { grid-template-columns: 1fr; }

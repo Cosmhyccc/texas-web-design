@@ -19,7 +19,7 @@ document.querySelectorAll('.pin').forEach(pin => { pin.dataset.n = pin.textConte
 // Things slide up as they come into view (skipped with reduced motion, and if IntersectionObserver is missing).
 const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!still && 'IntersectionObserver' in window) {
-  const items = document.querySelectorAll('.head, .stat, .screen, .checklist, .card, .shot, .step, .qs, .contact__inner');
+  const items = document.querySelectorAll('.stat, .screen, .checklist, .card, .shot, .step, .qs');
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { rootMargin: '0px 0px -8% 0px' });

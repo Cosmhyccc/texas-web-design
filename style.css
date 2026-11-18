@@ -145,7 +145,7 @@ section { max-width: var(--max); margin: 0 auto; padding: clamp(70px, 9vw, 130px
 .bubble::after { content: ""; position: absolute; left: 30px; bottom: -11px; width: 18px; height: 18px; background: var(--cream); border-right: 3px solid var(--ink); border-bottom: 3px solid var(--ink); border-bottom-right-radius: 3px; transform: rotate(45deg); }
 .bubble p { margin: 0; font-size: 17px; line-height: 1.25; }
 .tag { position: absolute; font-family: var(--f-head); font-weight: 900; text-transform: uppercase; font-size: 17px; padding: 6px 12px 5px; border-radius: 9px; white-space: nowrap; }
-.tag--star { right: -6%; top: 46%; background: var(--orange); color: var(--cream); transform: rotate(7deg); }
+.tag--star { left: -16%; bottom: 16%; background: var(--orange); color: var(--cream); transform: rotate(-6deg); }
 .tag--map { left: -8%; bottom: 12%; background: var(--green); transform: rotate(-6deg); }
 
 /* ---------- proof strip ---------- */
@@ -353,3 +353,10 @@ details p { margin: 0 4px 22px; font-size: 17px; line-height: 1.5; max-width: 46
   .h1__small { font-size: clamp(30px, 9.6vw, 50px); }
   .hero__me { width: min(60%, 230px); }
 }
+
+.hero__hi { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; transform: none; color: var(--ink); margin-bottom: 22px; }
+.hero__hi .chip { font-size: clamp(18px, 1.6vw, 24px); }
+.hero__hi .chip:nth-child(1) { transform: rotate(-3deg); }
+.hero__hi .chip:nth-child(2) { transform: rotate(2deg); }
+.hero__hi .chip:nth-child(3) { transform: rotate(-1.5deg); }
+.hero__for { font-family: var(--f-head); font-weight: 900; text-transform: uppercase; font-size: clamp(22px, 2vw, 30px); margin-left: 4px; }

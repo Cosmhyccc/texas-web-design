@@ -360,3 +360,11 @@ details p { margin: 0 4px 22px; font-size: 17px; line-height: 1.5; max-width: 46
 .hero__hi .chip:nth-child(2) { transform: rotate(2deg); }
 .hero__hi .chip:nth-child(3) { transform: rotate(-1.5deg); }
 .hero__for { font-family: var(--f-head); font-weight: 900; text-transform: uppercase; font-size: clamp(22px, 2vw, 30px); margin-left: 4px; }
+
+/* bio under the hero cutout */
+.hero__me { width: min(100%, 340px); }
+.cut--hero { width: 80%; margin: 0 auto; }
+.tag--star { left: -4%; bottom: auto; top: 62%; }
+.hero__bio { margin-top: 18px; font-size: 16.5px; line-height: 1.42; text-align: center; }
+@media (max-width: 760px) { .hero__me { width: min(92%, 340px); } }
+@media (max-width: 760px) { .hero__me .bubble { left: 2%; } }

@@ -433,3 +433,28 @@ details p { margin: 0 4px 22px; font-size: 17px; line-height: 1.5; max-width: 46
   .scene, .scr-btn, .mping { animation: none; }
   .scene--site { opacity: 1; }
 }
+
+/* maps scene: the search types out, then Your Business lands on top */
+.scene--maps { justify-content: flex-start; gap: 1.8cqw; padding-top: 6cqw; }
+.scene--maps .scr-search { display: flex; align-items: center; gap: 1.6cqw; padding: 1.4cqw 1.4cqw 1.4cqw 3cqw; }
+.scr-search__ico { font-size: 4.4cqw; line-height: 1; }
+.scr-type { display: inline-block; overflow: hidden; white-space: nowrap; width: 0; border-right: .5cqw solid var(--ink); animation: type 9s steps(21) infinite; animation-delay: 3s; }
+.scr-go { margin-left: auto; padding: .8cqw 2.4cqw; border-radius: 99px; background: var(--blue); color: var(--cream); font-size: 3cqw; }
+@keyframes type { 0% { width: 0; } 6%, 100% { width: 21ch; } }
+.scr-meta { margin: 0; font-size: 2.8cqw; color: var(--dim); opacity: 0; animation: show 9s infinite; animation-delay: 3s; }
+.scr-top { position: relative; display: flex; align-items: center; gap: 2.6cqw; padding: 2.6cqw 3cqw 2.2cqw; border-radius: 2.4cqw; background: #fff6d6; border: .7cqw solid var(--ink); box-shadow: .8cqw 1.2cqw 0 rgba(31,29,26,.18); opacity: 0; animation: land 9s var(--pop) infinite; animation-delay: 3s; }
+.scr-top b { display: block; font-family: var(--f-head); font-weight: 900; text-transform: uppercase; font-size: 6cqw; line-height: .95; }
+.scr-top span { display: block; font-size: 3cqw; color: var(--dim); }
+.scr-top__pin { flex: none; display: grid !important; place-items: center; width: 7cqw; height: 7cqw; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--orange); border: .6cqw solid var(--ink); color: var(--cream) !important; font: 900 3.6cqw/1 var(--f-head) !important; }
+.scr-top__badge { position: absolute; top: -3.2cqw; right: 3cqw; padding: .8cqw 2.2cqw; border-radius: 1.6cqw; background: var(--green); border: .5cqw solid var(--ink); color: var(--ink) !important; font: 900 3cqw/1 var(--f-head) !important; text-transform: uppercase; transform: rotate(4deg); }
+.scr-top__btns { display: flex !important; gap: 1.2cqw; margin-top: 1.2cqw; }
+.scr-top__btns i { font-style: normal; font-size: 2.6cqw; padding: .5cqw 2cqw; border-radius: 99px; background: var(--blue); color: var(--cream); }
+.scene--maps .scr-row { padding: 1.1cqw 2.6cqw; font-size: 3.2cqw; opacity: 0; animation: fade 9s infinite; animation-delay: 3s; }
+@keyframes show { 0%, 6% { opacity: 0; } 8%, 100% { opacity: 1; } }
+@keyframes land { 0%, 7% { opacity: 0; transform: translateY(-4cqw) scale(.85); } 11%, 100% { opacity: 1; transform: none; } }
+@keyframes fade { 0%, 10% { opacity: 0; } 13%, 100% { opacity: .55; } }
+@media (prefers-reduced-motion: reduce) {
+  .scr-type { animation: none; width: 21ch; border-right: 0; }
+  .scr-meta, .scr-top { animation: none; opacity: 1; }
+  .scene--maps .scr-row { animation: none; opacity: .55; }
+}

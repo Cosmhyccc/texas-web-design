@@ -118,10 +118,10 @@ section { max-width: var(--max); margin: 0 auto; padding: clamp(70px, 9vw, 130px
 
 /* ---------- hero ---------- */
 .hero {
-  position: relative; min-height: 100svh;
+  position: relative;
   display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); align-items: center;
   gap: clamp(16px, 3vw, 48px);
-  padding-top: 110px; padding-bottom: 60px;
+  padding-top: clamp(96px, 9vw, 130px); padding-bottom: 40px;
 }
 .hero__hi { color: var(--blue); font-size: clamp(18px, 1.7vw, 26px); margin: 0 0 14px; transform: rotate(-2deg); transform-origin: left; }
 .lede { font-size: clamp(18px, 1.45vw, 22px); line-height: 1.4; max-width: 31em; margin: 26px 0 0; }
@@ -340,7 +340,7 @@ details p { margin: 0 4px 22px; font-size: 17px; line-height: 1.5; max-width: 46
 }
 
 /* hero: AUSTIN is the focal point */
-.h1__big { display: flex; align-items: center; gap: .04em; font-size: clamp(110px, 17vw, 260px); line-height: .82; white-space: nowrap; }
+.h1__big { display: flex; align-items: center; gap: .04em; font-size: clamp(96px, 13.5vw, 230px); line-height: .82; white-space: nowrap; }
 .h1__big .w { transform: rotate(-2deg); transform-origin: 30% 70%; }
 .h1__tx { width: .52em; height: .52em; transform: rotate(10deg); filter: drop-shadow(3px 5px 0 rgba(59,42,20,.2)); margin-top: -.1em; }
 .h1__small { display: block; font-size: clamp(40px, 5.2vw, 80px); line-height: .9; margin-top: .12em; white-space: nowrap; }
@@ -458,3 +458,6 @@ details p { margin: 0 4px 22px; font-size: 17px; line-height: 1.5; max-width: 46
   .scr-meta, .scr-top { animation: none; opacity: 1; }
   .scene--maps .scr-row { animation: none; opacity: .55; }
 }
+
+.hero__copy { position: relative; z-index: 3; }
+@media (min-width: 761px) and (max-width: 1400px) { .mtag--maps { right: -4%; top: 6%; } }

@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" href="assets/logo-192.png">
   <link rel="preload" href="assets/fonts/BarlowCondensed-Black.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/Barlow-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=11">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -35,37 +35,6 @@
   </script>
 </head>
 <body>
-  <!-- sticker + crayon filters (same paper-cutout system as the homie site) -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <filter id="stk" x="-20%" y="-20%" width="140%" height="150%" color-interpolation-filters="sRGB">
-        <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="cut" />
-        <feMorphology in="SourceAlpha" operator="dilate" radius="6.2" result="edge" />
-        <feFlood flood-color="#1f1d1a" result="inkc" />
-        <feComposite in="inkc" in2="edge" operator="in" result="ink" />
-        <feFlood flood-color="#fff8e7" result="crm" />
-        <feComposite in="crm" in2="cut" operator="in" result="cream" />
-        <feOffset in="edge" dx="3" dy="5" result="off" />
-        <feGaussianBlur in="off" stdDeviation="3" result="blur" />
-        <feFlood flood-color="#3b2a14" flood-opacity=".28" result="shc" />
-        <feComposite in="shc" in2="blur" operator="in" result="shadow" />
-        <feMerge><feMergeNode in="shadow" /><feMergeNode in="ink" /><feMergeNode in="cream" /><feMergeNode in="SourceGraphic" /></feMerge>
-      </filter>
-      <filter id="stk-sm" x="-20%" y="-30%" width="140%" height="170%" color-interpolation-filters="sRGB">
-        <feMorphology in="SourceAlpha" operator="dilate" radius="3" result="cut" />
-        <feMorphology in="SourceAlpha" operator="dilate" radius="4" result="edge" />
-        <feFlood flood-color="#1f1d1a" result="inkc" />
-        <feComposite in="inkc" in2="edge" operator="in" result="ink" />
-        <feFlood flood-color="#fff8e7" result="crm" />
-        <feComposite in="crm" in2="cut" operator="in" result="cream" />
-        <feOffset in="edge" dx="2" dy="3" result="off" />
-        <feGaussianBlur in="off" stdDeviation="2" result="blur" />
-        <feFlood flood-color="#3b2a14" flood-opacity=".25" result="shc" />
-        <feComposite in="shc" in2="blur" operator="in" result="shadow" />
-        <feMerge><feMergeNode in="shadow" /><feMergeNode in="ink" /><feMergeNode in="cream" /><feMergeNode in="SourceGraphic" /></feMerge>
-      </filter>
-    </defs>
-  </svg>
   <div class="grain" aria-hidden="true"></div>
   <a class="skip" href="#main">Skip to content</a>
 
@@ -343,6 +312,6 @@
     <p>Websites, SEO, AI SEO &amp; lead gen for Austin small businesses.</p>
     <a class="pill" href="#main">Back to top ↑</a>
   </footer>
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 @font-face { font-family: "Barlow Condensed"; src: url(assets/fonts/BarlowCondensed-Black.woff2) format("woff2"); font-weight: 900; font-display: swap; }
 @font-face { font-family: "Barlow"; src: url(assets/fonts/Barlow-SemiBold.woff2) format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Caveat"; src: url(assets/fonts/Caveat-SemiBold.woff2) format("woff2"); font-weight: 600; font-display: swap; }
 @font-face { font-family: "Permanent Marker"; src: url(assets/fonts/PermanentMarker.woff2) format("woff2"); font-weight: 400; font-display: swap; }
 
 :root {
@@ -364,7 +365,13 @@ details p { margin: 0 4px 22px; font-size: 17px; line-height: 1.5; max-width: 46
 /* bio under the hero cutout */
 .hero__me { width: min(100%, 340px); }
 .cut--hero { width: 80%; margin: 0 auto; }
-.tag--star { left: -4%; bottom: auto; top: 62%; }
-.hero__bio { margin-top: 18px; font-size: 16.5px; line-height: 1.42; text-align: center; }
+.tag--star { left: -4%; bottom: auto; top: 290px; }
+.hero__bio { position: relative; margin-top: 20px; padding: 0 10px; text-align: center; transform: rotate(-1.5deg); }
+.hero__bio blockquote { margin: 0; font-family: "Caveat", "Bradley Hand", cursive; font-weight: 600; font-size: 25px; line-height: 1.12; }
+.hero__bio blockquote::before, .hero__bio blockquote::after { font-family: Georgia, "Times New Roman", serif; font-weight: 700; color: var(--orange); font-size: 2.3em; line-height: 0; vertical-align: -.36em; }
+.hero__bio blockquote::before { content: "“"; margin-right: .06em; }
+.hero__bio blockquote::after { content: "”"; margin-left: .04em; }
+.hero__bio cite { display: block; margin-top: 10px; font-family: "Caveat", cursive; font-style: normal; font-weight: 600; font-size: 24px; color: var(--blue); }
+.hero__bio cite::before { content: "— "; }
 @media (max-width: 760px) { .hero__me { width: min(92%, 340px); } }
 @media (max-width: 760px) { .hero__me .bubble { left: 2%; } }
